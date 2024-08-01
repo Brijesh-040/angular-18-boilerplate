@@ -1,0 +1,43 @@
+<div class="login-page">
+    <div class="login-body">
+        <div class="form-card">
+            <div class="logo">
+                <!-- <img src="../../../assets//img/project/logo.svg"> -->
+            </div>
+            <form [formGroup]="loginForm" novalidate>
+                <div class="form-row">
+                    <div class="custom-input">
+                        <label class="custom-label" for="username">Username*</label>
+                        <input class="inputfield" type="text" id="username" formControlName="username" required>
+                        <div class="invalid"
+                            *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                            Username is required
+                        </div>
+                    </div>
+                    <div class="custom-input">
+                        <label class="custom-label" for="password">Password*</label>
+                        <input class="inputfield" matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
+                        <button class="visibility-icon" mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
+                            <mat-icon>{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+                        </button>
+                        <div class="invalid"
+                            *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+                <div class="forgot-password">
+                    <span>Forgot Password?</span>
+                </div>
+                <div class="custom-btn">
+                    <button mat-flat-button class="btn" (click)="onSubmit()" type="submit">Login</button>
+                </div>
+                <div class="login-footer">
+                    <a title="Privacy Policy " target="_blank">Privacy Policy</a>
+                    <a title="Cookie Policy " target="_blank">Cookie Policy</a>
+                    <a title="Terms & Conditions " target="_blank">Terms & Conditions</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

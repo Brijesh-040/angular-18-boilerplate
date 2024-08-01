@@ -1,0 +1,158 @@
+// @import "/src/assets/scss/variable.scss";
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    // background-image: url('../../../assets//img/project/login.png');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    .login-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 20px;
+
+        .form-card {
+            max-width: 450px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 30px 30px 10px;
+            box-shadow: 0 5px 15px rgba(19, 0, 88, 0.1);
+
+            .logo {
+                max-width: 230px;
+                width: 100%;
+                margin: 0 auto 30px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .form-row {
+                position: relative;
+
+                .custom-input {
+                    margin-bottom: 24px;
+
+                    .invalid {
+                        color: red;
+                        font-size: 12px;
+                    }
+
+                    .inputfield {
+                        background-color: #e8f0fe40;
+                        border: 1px solid #e8f0fe;
+                        width: 100%;
+                        height: 46px;
+                        padding: 6px 16px;
+                        border-radius: 6px;
+                        outline: none;
+                        font-size: 15px;
+                        line-height: 17px;
+                        color: #2d4a78;
+                        transition: border-color 0.2s;
+                        font-family: 'Archivo', sans-serif;
+                        font-weight: 500;
+
+                        &:focus {
+                            border-color: #4873b9;
+                        }
+
+                        &::placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #374767;
+                            opacity: 0.5;
+                        }
+
+                        &:disabled {
+                            border-color: #dbdbdb;
+                            background-color: #efefef;
+                        }
+                    }
+
+                    .visibility-icon {
+                        position: absolute;
+                        right: 0px;
+                        top: 88%;
+                        transform: translateY(-50%);
+                        background-color: transparent;
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+
+                        mat-icon {
+                            font-size: 20px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+
+            .forgot-password {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #4873b9;
+                    font-weight: 500;
+                    font-family: 'Archivo', sans-serif;
+                    cursor: pointer;
+                }
+            }
+
+            .custom-btn {
+                text-align: center;
+
+                button {
+                    width: 100%;
+                    height: 42px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-family: 'Roboto', sans-serif;
+                    border-radius: 6px;
+                    background-color: #4873b9;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #365a9e;
+                    }
+                }
+            }
+
+            .login-footer {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+
+                a {
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #4873b9;
+                    font-weight: 500;
+                    font-family: 'Archivo', sans-serif;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: transparent;
+                        text-decoration: underline; 
+                    }
+                }
+            }
+        }
+    }
+}

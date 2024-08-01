@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration --o --host 0.0.0.0 --port 4208",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -16,7 +16,7 @@
     "@angular/common": "^18.1.0",
     "@angular/compiler": "^18.1.0",
     "@angular/core": "^18.1.0",
-    "@angular/forms": "^18.1.0",
+    "@angular/forms": "^18.1.3",
     "@angular/material": "^18.1.3",
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
